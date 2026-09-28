@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Frontend v2.0</h2>
+
+  <section>
+    <h3>Отправка данных</h3>
+    <input #textBox type="text" placeholder="Введите текст" />
+    <button (click)="sendData(textBox)">Отправить</button>
+    <p>{{ message() }}</p>
+  </section>
+
+  <hr />
+</div>

@@ -1,0 +1,22 @@
+.container {
+  max-width: 480px;
+  margin: 40px auto;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Выстраиваем элементы внутри секций вертикально */
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input, textarea, button { 
+  padding: 8px; 
+  font-size: 14px; 
+  width: 100%;
+  box-sizing: border-box;
+}

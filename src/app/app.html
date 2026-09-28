@@ -9,4 +9,10 @@
   </section>
 
   <hr />
+
+  <section>
+    <h3>Получение данных</h3>
+    <button (click)="getData()">Получить данные</button>
+    <textarea readonly rows="6" [value]="receivedData()" placeholder="Здесь появится содержимое data.txt"></textarea>
+  </section>
 </div>

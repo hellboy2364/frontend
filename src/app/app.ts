@@ -24,4 +24,12 @@ export class App {
         error: () => this.message.set('Ошибка при отправке данных на сервер')
       });
   }
+
+  getData(): void {
+    this.http.get<{ content: string }>('http://localhost:5000/api/data')
+      .subscribe({
+        next: (res) => this.receivedData.set(res.content),
+        error: () => this.receivedData.set('Ошибка при получении данных')
+      });
+  }
 }

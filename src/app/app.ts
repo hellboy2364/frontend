@@ -15,7 +15,7 @@ export class App {
 
   sendData(input: HTMLInputElement): void {
     const text = input.value;
-    this.http.post<{ message: string }>('http://localhost:5000/api/data', { text })
+    this.http.post<{ message: string }>('/api/data', { text })
       .subscribe({
         next: (res) => {
           this.message.set(res.message);
@@ -26,7 +26,7 @@ export class App {
   }
 
   getData(): void {
-    this.http.get<{ content: string }>('http://localhost:5000/api/data')
+    this.http.get<{ content: string }>('/api/data')
       .subscribe({
         next: (res) => this.receivedData.set(res.content),
         error: () => this.receivedData.set('Ошибка при получении данных')
